@@ -1,0 +1,794 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+:active,
+:focus {
+  outline: 0
+}
+a:active,
+a:focus {
+  outline: 0
+}
+aside,
+footer,
+header,
+nav {
+  display: block
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+button,
+input,
+textarea {
+  font-family: inherit
+}
+input::-ms-clear {
+  display: none
+}
+button {
+  cursor: pointer
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0
+}
+a,
+a:visited {
+  text-decoration: none
+}
+a:hover {
+  text-decoration: none
+}
+ul li {
+  list-style: none
+}
+img {
+  vertical-align: top
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400
+}
+@font-face {
+  font-family: "Museo Sans 100";
+  src: url(../fonts/MuseoSansCyrl-100.ttf);
+  font-weight: 400;
+  font-style: normal
+}
+@font-face {
+  font-family: "Museo Sans 300";
+  src: url(../fonts/MuseoSansCyrl-300.ttf);
+  font-weight: 400;
+  font-style: normal
+}
+@font-face {
+  font-family: "Museo Sans 700";
+  src: url(../fonts/MuseoSansCyrl-700.ttf);
+  font-weight: 400;
+  font-style: normal
+}
+.page {
+  position: relative;
+  width: 100%;
+  height: 660px;
+  background-image: url(../images/dest/bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Museo Sans 300";
+  color: #fff;
+  z-index: 0
+}
+.page a {
+  color: #fff
+}
+.page .wrapper {
+  max-width: 1170px;
+  height: 100%;
+  margin: 0 auto
+}
+.page .planet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 660px;
+  -o-object-position: center;
+  object-position: center;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: -1
+}
+.page .header {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #ffffff1f;
+  background-color: rgba(21,10,1,.21)
+}
+.page .header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: inherit
+}
+.page .header__logo {
+  height: 100%;
+  padding: 24px 18px 0 24px;
+  border: 1px solid;
+  -o-border-image: url(../images/dest/logo-border.png) 7/7;
+  border-image: url(../images/dest/logo-border.png) 7/7
+}
+.page .header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%
+}
+.page .header__menu a {
+  padding: 12px 0;
+  margin-left: 40px;
+  font-size: 16px;
+  line-height: 22px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
+}
+.page .header__menu a:first-of-type {
+  margin-left: 0
+}
+.page .header__menu a:hover {
+  border-bottom: 1px solid #b1b1b1;
+  color: #b1b1b1
+}
+.page .header__menu a:active {
+  border-bottom: 1px solid #909090;
+  color: #909090
+}
+.page .header__burger {
+  display: none;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s
+}
+.page .header__burger img {
+  width: 40px;
+  height: 40px
+}
+.page .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-height: 560px
+}
+.page .main .burger-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #151515f5;
+  z-index: 10
+}
+.page .main .burger-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 50%
+}
+.page .main .burger-list ul a {
+  font-size: 18px
+}
+.page .main .burger-list ul a:hover {
+  border-bottom: 1px solid #b1b1b1;
+  color: #b1b1b1
+}
+.page .main .burger-list ul a:active {
+  border-bottom: 1px solid #909090;
+  color: #909090
+}
+.page .main .burger-list .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px
+}
+.page .main .burger-list .close-btn img {
+  width: 40px;
+  height: 40px
+}
+.page .main-left {
+  padding-top: 110px
+}
+.page .main-left__text {
+  position: relative;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: -webkit-gradient(linear,right top,left top,from(#ff3f04),color-stop(80%,#fff));
+  background-image: -o-linear-gradient(right,#ff3f04 0,#fff 80%);
+  background-image: linear-gradient(to left,#ff3f04 0,#fff 80%);
+  overflow: hidden;
+  z-index: -2
+}
+.page .main-left__text h1 {
+  font-family: "Museo Sans 700";
+  font-size: 58px;
+  text-transform: uppercase
+}
+.page .main-left__text span {
+  font-family: "Museo Sans 300";
+  font-size: 25px;
+  text-transform: lowercase
+}
+.page .main-left__button {
+  position: absolute;
+  bottom: 220px;
+  left: calc(50% - 586px)
+}
+.page .main-left__button button {
+  position: relative;
+  left: -14px;
+  width: 180px;
+  height: 35px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 16px solid;
+  -o-border-image: url(../images/dest/btn-border.png) 16;
+  border-image: url(../images/dest/btn-border.png) 16;
+  background-color: rgba(22,21,29,.21);
+  background-clip: content-box;
+  font-family: "Museo Sans 100";
+  font-size: 14px;
+  color: #fff;
+  overflow: hidden
+}
+.page .main-left__button button:hover {
+  color: #b1b1b1
+}
+.page .main-left__button button:active {
+  color: #909090
+}
+.page .main-left__button .main-decorations {
+  position: absolute;
+  top: 60px;
+  left: 175px;
+  width: 332px;
+  height: 70px
+}
+.page .main-left__button .main-decorations .main-decoration-1 {
+  position: absolute;
+  top: -25px;
+  left: 29px;
+  width: 360px;
+  height: 40px;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  -o-border-image: -o-linear-gradient(left,transparent -40%,#fff 150%) 1;
+  border-image: -webkit-gradient(linear,left top,right top,color-stop(-40%,transparent),color-stop(150%,#fff)) 1;
+  border-image: linear-gradient(to right,transparent -40%,#fff 150%) 1;
+  -webkit-transform: skew(45deg);
+  -ms-transform: skew(45deg);
+  transform: skew(45deg)
+}
+.page .main-left__button .main-decorations .main-decoration-2 {
+  position: absolute;
+  top: 12px;
+  left: 408px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #fff;
+  border-radius: 50%
+}
+.page .main-right {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 185px 185px;
+  grid-template-columns: 185px 185px;
+  -ms-grid-rows: 185px 185px;
+  grid-template-rows: 185px 185px;
+  gap: 10px;
+  padding-top: 40px;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: -webkit-gradient(linear,right top,left top,from(#a1a1a1),color-stop(90%,#fff));
+  background-image: -o-linear-gradient(right,#a1a1a1 0,#fff 90%);
+  background-image: linear-gradient(to left,#a1a1a1 0,#fff 90%)
+}
+.page .main-right__benefit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  font-family: "Museo Sans 100";
+  font-size: 18px;
+  cursor: pointer
+}
+.page .main-right__benefit-1 {
+  background-image: -o-linear-gradient(315deg,transparent 50%,#fff 800%);
+  background-image: linear-gradient(135deg,transparent 50%,#fff 800%)
+}
+.page .main-right__benefit-1:hover {
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  -o-border-image: -o-linear-gradient(315deg,transparent 50%,#fff 200%) 1;
+  border-image: linear-gradient(135deg,transparent 50%,#fff 200%) 1;
+  background-image: -o-linear-gradient(315deg,transparent 50%,#fff 500%);
+  background-image: linear-gradient(135deg,transparent 50%,#fff 500%)
+}
+.page .main-right__benefit-2 {
+  background-image: -o-linear-gradient(225deg,transparent 50%,#fff 800%);
+  background-image: linear-gradient(225deg,transparent 50%,#fff 800%)
+}
+.page .main-right__benefit-2:hover {
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  -o-border-image: -o-linear-gradient(225deg,transparent 50%,#fff 200%) 1;
+  border-image: linear-gradient(225deg,transparent 50%,#fff 200%) 1;
+  background-image: -o-linear-gradient(225deg,transparent 50%,#fff 500%);
+  background-image: linear-gradient(225deg,transparent 50%,#fff 500%)
+}
+.page .main-right__benefit-3 {
+  background-image: -o-linear-gradient(45deg,transparent 50%,#fff 800%);
+  background-image: linear-gradient(45deg,transparent 50%,#fff 800%)
+}
+.page .main-right__benefit-3:hover {
+  border-right: 1px solid;
+  border-top: 1px solid;
+  -o-border-image: -o-linear-gradient(45deg,transparent 50%,#fff 200%) 1;
+  border-image: linear-gradient(45deg,transparent 50%,#fff 200%) 1;
+  background-image: -o-linear-gradient(45deg,transparent 50%,#fff 500%);
+  background-image: linear-gradient(45deg,transparent 50%,#fff 500%)
+}
+.page .main-right__benefit-4 {
+  background-image: -o-linear-gradient(135deg,transparent 50%,#fff 800%);
+  background-image: linear-gradient(-45deg,transparent 50%,#fff 800%)
+}
+.page .main-right__benefit-4:hover {
+  border-left: 1px solid;
+  border-top: 1px solid;
+  -o-border-image: -o-linear-gradient(135deg,transparent 50%,#fff 200%) 1;
+  border-image: linear-gradient(-45deg,transparent 50%,#fff 200%) 1;
+  background-image: -o-linear-gradient(135deg,transparent 50%,#fff 500%);
+  background-image: linear-gradient(-45deg,transparent 50%,#fff 500%)
+}
+.page .main-right__benefit span:first-of-type {
+  margin-bottom: 15px
+}
+.page .main-right__benefit .little-span {
+  font-size: 16px
+}
+.page .main-right__benefit .big-span {
+  font-family: "Museo Sans 700";
+  font-size: 60px
+}
+.page .main-right__benefit .little-g {
+  font-size: 20px
+}
+.page .main-mini__benefits {
+  position: absolute;
+  top: calc(50vh - 190px);
+  left: calc(50% - 190px);
+  display: none;
+  -ms-grid-columns: 185px 185px;
+  grid-template-columns: 185px 185px;
+  -ms-grid-rows: 185px 185px;
+  grid-template-rows: 185px 185px;
+  gap: 10px;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: -webkit-gradient(linear,right top,left top,from(#a1a1a1),color-stop(90%,#fff));
+  background-image: -o-linear-gradient(right,#a1a1a1 0,#fff 90%);
+  background-image: linear-gradient(to left,#a1a1a1 0,#fff 90%)
+}
+.page .main-mini__benefits__benefit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  font-family: "Museo Sans 100";
+  font-size: 18px;
+  cursor: pointer
+}
+.page .main-mini__benefits__benefit-1 {
+  background-image: -o-linear-gradient(315deg,transparent 50%,#fff 800%);
+  background-image: linear-gradient(135deg,transparent 50%,#fff 800%)
+}
+.page .main-mini__benefits__benefit-1:hover {
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  -o-border-image: -o-linear-gradient(315deg,transparent 50%,#fff 200%) 1;
+  border-image: linear-gradient(135deg,transparent 50%,#fff 200%) 1;
+  background-image: -o-linear-gradient(315deg,transparent 50%,#fff 500%);
+  background-image: linear-gradient(135deg,transparent 50%,#fff 500%)
+}
+.page .main-mini__benefits__benefit-2 {
+  background-image: -o-linear-gradient(225deg,transparent 50%,#fff 800%);
+  background-image: linear-gradient(225deg,transparent 50%,#fff 800%)
+}
+.page .main-mini__benefits__benefit-2:hover {
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  -o-border-image: -o-linear-gradient(225deg,transparent 50%,#fff 200%) 1;
+  border-image: linear-gradient(225deg,transparent 50%,#fff 200%) 1;
+  background-image: -o-linear-gradient(225deg,transparent 50%,#fff 500%);
+  background-image: linear-gradient(225deg,transparent 50%,#fff 500%)
+}
+.page .main-mini__benefits__benefit-3 {
+  background-image: -o-linear-gradient(45deg,transparent 50%,#fff 800%);
+  background-image: linear-gradient(45deg,transparent 50%,#fff 800%)
+}
+.page .main-mini__benefits__benefit-3:hover {
+  border-right: 1px solid;
+  border-top: 1px solid;
+  -o-border-image: -o-linear-gradient(45deg,transparent 50%,#fff 200%) 1;
+  border-image: linear-gradient(45deg,transparent 50%,#fff 200%) 1;
+  background-image: -o-linear-gradient(45deg,transparent 50%,#fff 500%);
+  background-image: linear-gradient(45deg,transparent 50%,#fff 500%)
+}
+.page .main-mini__benefits__benefit-4 {
+  background-image: -o-linear-gradient(135deg,transparent 50%,#fff 800%);
+  background-image: linear-gradient(-45deg,transparent 50%,#fff 800%)
+}
+.page .main-mini__benefits__benefit-4:hover {
+  border-left: 1px solid;
+  border-top: 1px solid;
+  -o-border-image: -o-linear-gradient(135deg,transparent 50%,#fff 200%) 1;
+  border-image: linear-gradient(-45deg,transparent 50%,#fff 200%) 1;
+  background-image: -o-linear-gradient(135deg,transparent 50%,#fff 500%);
+  background-image: linear-gradient(-45deg,transparent 50%,#fff 500%)
+}
+.page .main-mini__benefits__benefit span:first-of-type {
+  margin-bottom: 15px
+}
+.page .main-mini__benefits__benefit .little-span {
+  font-size: 16px
+}
+.page .main-mini__benefits__benefit .big-span {
+  font-family: "Museo Sans 700";
+  font-size: 60px
+}
+.page .main-mini__benefits__benefit .little-g {
+  font-size: 20px
+}
+@media (max-width:1280px) {
+  .page {
+    height: 100%;
+    background-size: cover cover
+  }
+  .page .planet {
+    height: 100%
+  }
+  .page .main-left__button {
+    bottom: 33vh
+  }
+}
+@media (max-width:1190px) {
+  .wrapper {
+    padding: 0 20px
+  }
+  .page .header__menu a {
+    margin-left: 25px;
+    font-size: 14px
+  }
+  .page .main-left__text {
+    left: 20px
+  }
+  .page .main-left__text h1 {
+    font-size: 48px
+  }
+  .page .main-left__button button {
+    left: 100px
+  }
+  .page .main-left__button .main-decorations {
+    left: 289px
+  }
+  .page .main-left__button .main-decorations .main-decoration-1 {
+    width: 250px
+  }
+  .page .main-left__button .main-decorations .main-decoration-2 {
+    left: 294px
+  }
+  .page .main-right {
+    -ms-grid-columns: 155px 155px;
+    grid-template-columns: 155px 155px;
+    -ms-grid-rows: 155px 155px;
+    grid-template-rows: 155px 155px;
+    padding-top: 60px
+  }
+  .page .main-right__benefit {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 20px 0;
+    font-size: 16px
+  }
+  .page .main-right__benefit span:first-of-type {
+    margin-bottom: 0
+  }
+  .page .main-right__benefit .little-span {
+    font-size: 14px
+  }
+  .page .main-right__benefit .big-span {
+    font-family: "Museo Sans 700";
+    font-size: 43px
+  }
+  .page .main-right__benefit .little-g {
+    font-size: 16px
+  }
+}
+@media (max-width:1100px) {
+  .page .main-left__text h1 {
+    font-size: 43px
+  }
+}
+@media (max-width:1024px) {
+  .page .main-left__button button {
+    left: 150px
+  }
+  .page .main-left__button .main-decorations {
+    left: 339px
+  }
+  .page .main-left__button .main-decorations .main-decoration-1 {
+    width: 200px
+  }
+  .page .main-left__button .main-decorations .main-decoration-2 {
+    left: 244px
+  }
+  .page .main-right {
+    -ms-grid-columns: 140px 140px;
+    grid-template-columns: 140px 140px;
+    -ms-grid-rows: 140px 140px;
+    grid-template-rows: 140px 140px
+  }
+  .page .main-right__benefit .big-span {
+    font-family: "Museo Sans 700";
+    font-size: 38px
+  }
+}
+@media (max-width:1023px) {
+  .planet {
+    display: none
+  }
+}
+@media (max-width:956px) {
+  .page {
+    height: 100%;
+    min-height: 100%
+  }
+  .page .header {
+    height: 70px
+  }
+  .page .header__logo {
+    padding: 12px 18px 0 24px
+  }
+  .page .header__menu {
+    display: none
+  }
+  .page .header__burger {
+    display: block
+  }
+  .page .main {
+    display: block
+  }
+  .page .main-left {
+    height: 100%;
+    min-height: 100%;
+    padding-top: 60px
+  }
+  .page .main-left__text {
+    left: 0
+  }
+  .page .main-left__text h1 {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: "Museo Sans 700";
+    font-size: 58px;
+    text-transform: uppercase
+  }
+  .page .main-left__text span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: "Museo Sans 300";
+    font-size: 25px;
+    text-transform: lowercase
+  }
+  .page .main-left__button {
+    position: absolute;
+    bottom: 60px;
+    left: calc(50% - 156px)
+  }
+  .page .main-left__button button {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 50px;
+    font-size: 16px
+  }
+  .page .main-left__button .main-decorations {
+    display: none
+  }
+  .page .main-right {
+    display: none
+  }
+  .page .main-mini__benefits {
+    display: -ms-grid;
+    display: grid;
+    color: #fff
+  }
+}
+@media (max-width:540px) {
+  .page .main-left__text h1 {
+    font-size: 45px
+  }
+  .page .main-mini__benefits {
+    top: calc(50vh - 155px);
+    left: calc(50% - 155px);
+    -ms-grid-columns: 150px 150px;
+    grid-template-columns: 150px 150px;
+    -ms-grid-rows: 150px 150px;
+    grid-template-rows: 150px 150px
+  }
+  .page .main-mini__benefits__benefit .big-span {
+    font-size: 40px
+  }
+}
+@media (max-width:420px) {
+  .page .header {
+    height: 50px
+  }
+  .page .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 18px 0 24px
+  }
+  .page .header__logo img {
+    width: 200px;
+    height: auto
+  }
+  .page .main-left__text h1 {
+    font-size: 45px
+  }
+}
+@media (max-width:370px) {
+  .wrapper {
+    padding: 0
+  }
+  .page .main-left__text h1 {
+    font-size: 35px
+  }
+}
+@media (max-width:320px) {
+  .page .main-left__text h1 {
+    font-size: 30px
+  }
+  .page .main-mini__benefits {
+    top: calc(50vh - 120px);
+    left: calc(50% - 120px);
+    -ms-grid-columns: 120px 120px;
+    grid-template-columns: 120px 120px;
+    -ms-grid-rows: 120px 120px;
+    grid-template-rows: 120px 120px
+  }
+  .page .main-mini__benefits__benefit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0
+  }
+  .page .main-mini__benefits__benefit span:first-of-type {
+    margin: 0
+  }
+  .page .main-mini__benefits__benefit .big-span {
+    font-size: 30px
+  }
+}
+@media (max-width:310px) {
+  .page .header__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 12px 0 18px
+  }
+  .page .header__logo img {
+    width: 130px
+  }
+  .page .main-left__button {
+    left: calc(50% - 106px)
+  }
+  .page .main-left__button button {
+    width: 180px
+  }
+}
+@media (max-height:660px) {
+  .page .main-mini__benefits {
+    display: none
+  }
+}

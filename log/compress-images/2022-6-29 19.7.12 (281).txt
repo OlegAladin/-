@@ -1,0 +1,8 @@
+File from: [app/images/src/bg — копия.png]
+
+File to: [app/images/dest/bg — копия.png]
+
+Compression algorithm: [pngquant]
+
+Description: Error: Command failed: C:\Users\olegm\Desktop\Тестовое задание\node_modules\pngquant-bin\vendor\pngquant.exe --quality=75-100 -o app/images/dest/bg — копия.png app/images/src/bg — копия.png
+  error: cannot open app\images\src\bg — копия.png for reading

@@ -1,0 +1,388 @@
+/*---Адаптивность---*/
+@media (max-width: 1280px) {
+    .page {
+        height: 100%;
+        background-size: cover cover;
+
+        .planet {
+            height: 100%;
+        }
+
+        .main {
+            &-left {
+                &__button {
+                    bottom: 33vh;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1190px) {
+    .wrapper {
+        padding: 0 20px;
+    }
+
+    .page {
+        .header {
+            &__menu {
+                a {
+                    margin-left: 25px;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .main {
+            &-left {
+                &__text {
+                    left: 20px;
+
+                    h1 {
+                        font-size: 48px;
+                    }
+                }
+
+                &__button {
+
+                    button {
+                        left: 100px;
+                    }
+
+                    .main-decorations {
+                        left: 289px;
+
+                        .main-decoration-1 {
+                            width: 250px;
+                        }
+
+                        .main-decoration-2 {
+                            left: 294px;
+                        }
+                    }
+                }
+            }
+
+            &-right {
+                grid-template-columns: 155px 155px;
+                grid-template-rows: 155px 155px;
+                padding-top: 60px;
+
+                &__benefit {
+                    justify-content: space-around;
+                    padding: 20px 0;
+                    font-size: 16px;
+
+                    span {
+                        &:first-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .little-span {
+                        font-size: 14px;
+                    }
+
+                    .big-span {
+                        font-family: 'Museo Sans 700';
+                        font-size: 43px;
+                    }
+
+                    .little-g {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .page {
+        .main {
+            &-left {
+                &__text {
+                    h1 {
+                        font-size: 43px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .page {
+        .main {
+            &-left {
+
+                &__button {
+
+                    button {
+                        left: 150px;
+                    }
+
+                    .main-decorations {
+                        left: 339px;
+
+                        .main-decoration-1 {
+                            width: 200px;
+                        }
+
+                        .main-decoration-2 {
+                            left: 244px;
+                        }
+                    }
+                }
+            }
+
+            &-right {
+                grid-template-columns: 140px 140px;
+                grid-template-rows: 140px 140px;
+
+                &__benefit {
+                    .big-span {
+                        font-family: 'Museo Sans 700';
+                        font-size: 38px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .planet {
+        display: none;
+    }
+}
+
+@media (max-width: 956px) {
+    .page {
+        height: 100%;
+        min-height: 100%;
+
+        .header {
+            height: 70px;
+
+            &__logo {
+                padding: 12px 18px 0 24px;
+            }
+
+            &__menu {
+                display: none;
+            }
+
+            &__burger {
+                display: block;
+            }
+        }
+
+        .main {
+            display: block;
+
+            &-left {
+                height: 100%;
+                min-height: 100%;
+                padding-top: 60px;
+
+                &__text {
+                    left: 0;
+
+                    h1 {
+                        display: inline-block;
+                        width: 100%;
+                        text-align: center;
+                        font-family: 'Museo Sans 700';
+                        font-size: 58px;
+                        text-transform: uppercase;
+                    }
+
+                    span {
+                        display: inline-block;
+                        width: 100%;
+                        text-align: center;
+                        font-family: 'Museo Sans 300';
+                        font-size: 25px;
+                        text-transform: lowercase;
+                    }
+                }
+
+                &__button {
+                    position: absolute;
+                    bottom: 60px;
+                    left: calc(50% - 312px / 2);
+
+                    button {
+                        position: relative;
+                        left: 0;
+                        top: 0;
+                        width: 280px;
+                        height: 50px;
+                        font-size: 16px;
+                    }
+
+                    .main-decorations {
+                        display: none;
+                    }
+                }
+            }
+
+            &-right {
+                display: none;
+            }
+        }
+
+        .main-mini__benefits {
+            display: grid;
+            color: #ffffff;
+        }
+    }
+}
+
+@media (max-width: 540px) {
+    .page {
+        .main {
+            &-left {
+                &__text {
+                    h1 {
+                        font-size: 45px;
+                    }
+                }
+            }
+        }
+
+        .main-mini__benefits {
+            top: calc(50vh - 310px / 2);
+            left: calc(50% - 310px / 2);
+            grid-template-columns: 150px 150px;
+            grid-template-rows: 150px 150px;
+
+            &__benefit {
+                .big-span {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .page {
+        .header {
+            height: 50px;
+
+            &__logo {
+                display: flex;
+                align-items: center;
+                padding: 0 18px 0 24px;
+
+                img {
+                    width: 200px;
+                    height: auto;
+                }
+            }
+        }
+
+        .main {
+            &-left {
+                &__text {
+                    h1 {
+                        font-size: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .wrapper {
+        padding: 0;
+    }
+
+    .page {
+        .main {
+            &-left {
+                &__text {
+                    h1 {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .page {
+        .main {
+            &-left {
+                &__text {
+                    h1 {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+
+        .main-mini__benefits {
+            top: calc(50vh - 240px / 2);
+            left: calc(50% - 240px / 2);
+            grid-template-columns: 120px 120px;
+            grid-template-rows: 120px 120px;
+
+            &__benefit {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0;
+
+                span:first-of-type {
+                    margin: 0;
+                }
+
+                .big-span {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 310px) {
+    .page {
+        .header {
+            &__logo {
+                display: flex;
+                align-items: center;
+                padding: 0 12px 0 18px;
+
+                img {
+                    width: 130px;
+                }
+            }
+        }
+
+        .main {
+            &-left {
+                &__button {
+                    left: calc(50% - 212px / 2);
+
+                    button {
+                        width: 180px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-height: 660px) {
+    .page {
+        .main-mini__benefits {
+            display: none;
+        }
+    }
+}
